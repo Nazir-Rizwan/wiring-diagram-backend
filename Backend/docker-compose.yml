@@ -1,0 +1,10 @@
+services:
+  status-backend:
+    build: .
+    ports:
+      - "${PORT:-4000}:4000"
+    environment:
+      - PORT=4000
+      # Change to 'inactive' to block all Electron clients, then run: docker compose up -d --build
+      - APP_STATUS=${APP_STATUS:-active}
+    restart: unless-stopped
