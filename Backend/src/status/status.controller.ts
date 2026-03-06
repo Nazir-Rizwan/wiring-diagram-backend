@@ -6,12 +6,13 @@ export class StatusController {
   constructor(private readonly statusService: StatusService) {}
 
   /**
-   * GET /status
+   * GET /status  — public
    * Returns { status: 'active' } or { status: 'inactive' }
-   * Electron app polls this endpoint on startup.
+   * Electron app calls this on every launch.
    */
   @Get()
-  getStatus() {
+  async getStatus() {
     return this.statusService.getStatus();
   }
 }
+

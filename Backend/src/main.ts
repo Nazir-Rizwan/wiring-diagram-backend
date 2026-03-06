@@ -7,7 +7,7 @@ async function bootstrap() {
   // Allow Electron app (and any origin) to call this endpoint
   app.enableCors({
     origin: '*',
-    methods: ['GET'],
+    methods: ['GET', 'POST'],
   });
 
   // Graceful shutdown
@@ -18,3 +18,4 @@ async function bootstrap() {
   console.log(`Status backend running on port ${port}`);
 }
 bootstrap();
+

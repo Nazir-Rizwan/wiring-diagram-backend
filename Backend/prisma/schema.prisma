@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Single-row table — id is always 1
+model AppStatus {
+  id        Int      @id @default(1)
+  status    String   @default("active")
+  updatedAt DateTime @updatedAt
+}

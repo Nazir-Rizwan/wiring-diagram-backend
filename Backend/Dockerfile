@@ -24,4 +24,4 @@ COPY --from=builder /app/dist ./dist
 # Expose the port (default 3000, override via PORT env var)
 EXPOSE 4000
 
-CMD ["node", "dist/main"]
+CMD ["node", "dist/src/main"]

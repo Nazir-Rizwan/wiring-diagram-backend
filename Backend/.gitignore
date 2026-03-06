@@ -4,6 +4,9 @@ node_modules
 # Build output
 dist
 
+# Prisma generated client (auto-generated during build via postinstall)
+generated
+
 # Environment variables — NEVER commit .env
 .env
 
@@ -17,3 +20,5 @@ npm-debug.log*
 # IDE
 .idea
 .vscode
+
+/generated/prisma
